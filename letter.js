@@ -1,10 +1,10 @@
 
-function Letter(character) {
-    this.character = character;
+function Letter(ltr) {
+    this.ltr = ltr;
     this.show = false;
     this.letterRender = function () {
         if (this.show) {
-            return this.character;
+            return this.ltr;
         }
         else {
             return '_';
