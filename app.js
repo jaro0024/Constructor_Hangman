@@ -2,11 +2,16 @@ var inquirer = require('inquirer');
 var Word = require("./word.js");
 var Game = require("./game.js");
 
-console.log("Guess a letter of these War Movies!");
+console.log("War Movies Hangman!");
 console.log("Good Luck!");
 console.log("-----------------------------");
-// prompt.start();
 
-// // Hold the value whether someone is an "admin" or "user"
-// var userGuess = process.argv[2];
+prompt.start();
+
+var game = {
+    wordList: Game.wordList,
+    wordsCorrect: 0,
+    guessesLeft: 10,
+    guessedLetters: [], 
+}
 
