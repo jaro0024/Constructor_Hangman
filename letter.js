@@ -4,14 +4,17 @@ function Letter(ltr) {
     this.appear = false;
     // Function to render letters
     this.letterRender = function () {
-        if (this.appear) {
-            return this.ltr;
+        if (this.ltr === "") {
+            this.appear = true;
+            return " ";
+        }
+        if (this.appear === false) {
+            return " _ ";
         }
         else {
-            return ' _ ';
+            return this.ltr;
         }
     };
 };
-
 // To export the Letter module
 module.exports = Letter;
