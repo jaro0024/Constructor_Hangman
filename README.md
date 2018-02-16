@@ -17,3 +17,6 @@ A War Movies themed hangman command-line game built using Javascript Constructor
 5. Press "y" when prompted to start game
 6. Guess letters until word is guessed correctly or until you run out of guesses
 7. Start over if wanted by pressing "y" or end  game by pressing "n" when prompted
+
+## Author 
+Daniela Jaros
