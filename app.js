@@ -33,8 +33,8 @@ var hangman = {
     newGame: function () {
         if (this.guessesLeft === 7) {
             console.log("READY SET GO!");
-            var randNum = Math.floor(Math.random() * this.wordList.length);
-            this.currentWord = new Word(this.wordList[randNum]);
+            var randomWord = Math.floor(Math.random() * this.wordList.length);
+            this.currentWord = new Word(this.wordList[randomWord]);
             this.currentWord.getLtr();
             console.log(this.currentWord.renderWord());
             this.keepPromptingUser();
@@ -62,6 +62,7 @@ var hangman = {
         }]).then(function (ltr) {
             var letterReturned = (ltr.chosenLtr).toUpperCase();
             var guessedAlready = false;
+
             for (var i = 0; i < that.guessedLetters.length; i++) {
                 if (letterReturned === that.guessedLetters[i]) {
                     guessedAlready = true;
@@ -93,16 +94,18 @@ var hangman = {
                 }
                 if (that.guessesLeft > 0 && that.currentWord.wordFound === false) {
                     that.keepPromptingUser();
-                } else if (that.guessesLeft === 0) {
+                }
+                else if (that.guessesLeft === 0) {
                     console.log('Game over!');
                     console.log('The word you were guessing was: ' + that.currentWord.word);
                 }
-            } else {
+            }
+            else {
                 console.log("You've guessed that letter already. Try again.")
                 that.keepPromptingUser();
             }
         });
     }
-}
+};
 
 hangman.startGame();
