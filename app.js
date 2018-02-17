@@ -6,7 +6,7 @@ var Word = require("./word.js");
 
 // Creating an object for Hangman
 var hangman = {
-    wordList: ["Dunkirk", "Saving Private Ryan", "Fury", "The Thin Red Line", "Platoon", "Black Hawk Down", "The Hurt Locker", "G"],
+    wordList: ["Dunkirk", "Fury", "Platoon", "Patton", "Glory", "Downfall", "Jarhead", "Braveheart"],
     guessesLeft: 7,
     guessedLetters: [],
     display: 0,
