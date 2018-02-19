@@ -35,6 +35,7 @@ var hangman = {
         });
     },
     newGame: function () {
+        this.guessedLetters = [];
         if (this.guessesLeft === 7) {
             console.log("------------------------------------------------------------");
             console.log(" READY SET GO!");

@@ -34,7 +34,7 @@ function Word(word) {
         // Loop to check if the word letters in the array are equal to the guessedLetter
         for(var i = 0; i < this.letters.length; i++) {
             // If they match, the letter guessed will appear 
-            if(this.letters[i].ltr === guessedLetter) {
+            if(this.letters[i].ltr.toUpperCase() === guessedLetter) {
                 this.letters[i].appear = true;
                 whatToReturn++;
             }

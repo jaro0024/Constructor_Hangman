@@ -4,10 +4,6 @@ function Letter(ltr) {
     this.appear = false;
     // Function to render letters
     this.letterRender = function () {
-        if (this.ltr === "") {
-            this.appear = true;
-            return " ";
-        }
         if (this.appear === false) {
             return " _ ";
         }
